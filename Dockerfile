@@ -6,4 +6,4 @@ FROM ruimarinho/bitcoin-core
 
 ENTRYPOINT ["/entrypoint.sh"]
 
-CMD ["-printtoconsole -regtest=1"]
+CMD ["-printtoconsole", "-regtest=1"]
