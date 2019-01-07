@@ -9,7 +9,7 @@ then
 fi
 
 
-helm ${kubeContextArg} del --purge lightning-node-easy
+helm ${kubeContextArg} del --purge lightning-kube
 
 #if [ $? -eq 0 ]
 #then

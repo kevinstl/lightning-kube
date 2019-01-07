@@ -40,7 +40,7 @@ then
 fi
 
 
-helm ${kubeContextArg} ${namespaceArg} install -n lightning-node-easy --set database=${database} ${serviceTypeArg} ${nodePortArg} --set image.tag=${imageTag} charts/lightning-node-easy
+helm ${kubeContextArg} ${namespaceArg} install -n lightning-kube --set database=${database} ${serviceTypeArg} ${nodePortArg} --set image.tag=${imageTag} charts/lightning-kube
 
 
 if [ $? -eq 0 ]
