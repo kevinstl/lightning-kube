@@ -118,9 +118,8 @@ pipeline {
         script {
           if (kubeEnv?.trim() == 'local') {
             container('go') {
-              sh "echo branch: ${branch}"
-//              sh "echo $(branch)"
-              sh "./push.sh ${branch}"
+              sh "echo branch: $branch"
+              sh "./push.sh $branch"
             }
           }
         }
