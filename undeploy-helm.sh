@@ -9,7 +9,7 @@ then
 fi
 
 
-helm ${kubeContextArg} del --purge lightning-kube
+helm ${kubeContextArg} del --purge lightning-kube-bitcoind
 
 #if [ $? -eq 0 ]
 #then

@@ -40,7 +40,7 @@ then
 fi
 
 
-helm ${kubeContextArg} ${namespaceArg} install -n lightning-kube --set database=${database} ${serviceTypeArg} ${nodePortArg} --set image.tag=${imageTag} charts/lightning-kube
+helm ${kubeContextArg} ${namespaceArg} install -n lightning-kube-bitcoind --set database=${database} ${serviceTypeArg} ${nodePortArg} --set image.tag=${imageTag} charts/lightning-kube-bitcoind
 
 
 if [ $? -eq 0 ]

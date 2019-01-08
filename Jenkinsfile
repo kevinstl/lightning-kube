@@ -5,7 +5,7 @@ pipeline {
   }
   environment {
     ORG               = 'kevinstl'
-    APP_NAME          = 'lightning-kube'
+    APP_NAME          = 'lightning-kube-bitcoind'
     CHARTMUSEUM_CREDS = credentials('jenkins-x-chartmuseum')
   }
   stages {
@@ -106,7 +106,7 @@ pipeline {
           if (kubeEnv?.trim() == 'local') {
             container('go') {
               sh './undeploy-helm.sh "" || true'
-              sh './deploy-helm.sh "" jx-local \$(cat VERSION) lightning-kube-local NodePort 30080'
+              sh './deploy-helm.sh "" jx-local \$(cat VERSION) lightning-kube-bitcoind-local NodePort 30080'
             }
           }
         }
@@ -158,7 +158,7 @@ def release(branch) {
 //    sh "mvn versions:set -DnewVersion=\$(cat VERSION)"
   }
 
-  dir ('./charts/lightning-kube') {
+  dir ('./charts/lightning-kube-bitcoind') {
     container('go') {
       sh "make tag"
     }
@@ -189,7 +189,7 @@ def release(branch) {
 
 def promote() {
 
-  dir ('./charts/lightning-kube') {
+  dir ('./charts/lightning-kube-bitcoind') {
     container('go') {
       sh 'jx step changelog --version v\$(cat ../../VERSION)'
 
