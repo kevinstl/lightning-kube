@@ -1,6 +1,6 @@
 CHART_REPO := http://jenkins-x-chartmuseum:8080
 CURRENT=$(pwd)
-NAME := lightning-kube
+NAME := lightning-kube-bitcoind
 OS := $(shell uname)
 VERSION := $(shell cat ../../VERSION)
 
