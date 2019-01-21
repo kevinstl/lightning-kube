@@ -40,4 +40,19 @@ spec:
           timeoutSeconds: {{ .Values.readinessProbe.timeoutSeconds }}
         resources:
 {{ toYaml .Values.resources | indent 12 }}
+
+
+        volumeMounts:
+        - mountPath: /data/lightning-kube
+          name: lightning-kube
+      volumes:
+      - name: lightning-kube
+        hostPath:
+          # directory location on host
+          path: /host-home/Developer/projects/lightning-kube
+          # this field is optional
+          type: DirectoryOrCreate
+
+
+
       terminationGracePeriodSeconds: {{ .Values.terminationGracePeriodSeconds }}

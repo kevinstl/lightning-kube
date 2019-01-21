@@ -106,7 +106,7 @@ pipeline {
           if (kubeEnv?.trim() == 'local') {
             container('go') {
               sh './undeploy-helm.sh "" || true'
-              sh './deploy-helm.sh "" jx-local \$(cat VERSION) lightning-kube-local NodePort 30080'
+              sh './deploy-helm.sh "" jx-local \$(cat VERSION) lightning-kube-local NodePort 30801'
             }
           }
         }
