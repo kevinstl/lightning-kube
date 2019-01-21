@@ -158,11 +158,11 @@ def release(branch) {
   }
 
   dir ('./charts/lightning-kube') {
-    if (kubeEnv?.trim() != 'local') {
+//    if (kubeEnv?.trim() != 'local') {
       container('go') {
         sh "make tag"
       }
-    }
+//    }
   }
 
   container('go') {
