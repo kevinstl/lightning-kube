@@ -1,4 +1,4 @@
 FROM thomsch98/markserv
-EXPOSE 80
-ENTRYPOINT ["/lightning-kube"]
-COPY ./bin/ /
+#EXPOSE 3080
+#ENTRYPOINT ["/lightning-kube"]
+#COPY ./bin/ /
