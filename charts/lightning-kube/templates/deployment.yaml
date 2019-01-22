@@ -43,13 +43,13 @@ spec:
 
 
         volumeMounts:
-        - mountPath: /data/lightning-kube
-          name: lightning-kube
+        - mountPath: /data
+          name: projects
       volumes:
-      - name: lightning-kube
+      - name: projects
         hostPath:
           # directory location on host
-          path: /host-home/Developer/projects/lightning-kube
+          path: /host-home/Developer/projects
           # this field is optional
           type: DirectoryOrCreate
 
