@@ -3,7 +3,7 @@
 # Declare variables to be passed into your templates.
 replicaCount: 1
 image:
-  repository: jenkins-x-docker-registry.jx:5000/kevinstl/lightning-kube
+  repository: 10.99.211.147:5000/kevinstl/lightning-kube
   tag: 0.0.21
   pullPolicy: IfNotPresent
 service:

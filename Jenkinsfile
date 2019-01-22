@@ -106,7 +106,7 @@ pipeline {
           if (kubeEnv?.trim() == 'local') {
             container('go') {
               sh './undeploy-helm.sh "" || true'
-              sh './deploy-helm.sh "" lightning-kube \$(cat VERSION) lightning-kube-local NodePort 30801'
+              sh './deploy-helm.sh "" jx-local \$(cat VERSION) lightning-kube-local NodePort 30801'
             }
           }
         }
@@ -158,11 +158,11 @@ def release(branch) {
   }
 
   dir ('./charts/lightning-kube') {
-    if (kubeEnv?.trim() != 'local') {
+//    if (kubeEnv?.trim() != 'local') {
       container('go') {
         sh "make tag"
       }
-    }
+//    }
   }
 
   container('go') {
@@ -211,3 +211,4 @@ def postBuild() {
     }
   }
 }
+
