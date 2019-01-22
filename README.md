@@ -24,8 +24,8 @@ To install this project:
 
 1. Stand up a [Kubernetes Cluster and Install Jenkins X](https://github.com/kevinstl/minikube-easy#preparing-for-installations).
 2. Make the directory to hold this project in you home directory: `mkdir -p /Developer/projects` Your installation of this project will look for this directory. If you need to change it the modification can be made in [deployment.yaml](https://github.com/kevinstl/lightning-kube/blob/master/charts/lightning-kube/templates/deployment.yaml) 
-3. Clone this project. `git clone https://github.com/kevinstl/lightning-kube ~/Developer/projects`
-4. Change to scripts directory `cd lightning-kube/scripts`
+3. Clone this project. `git clone https://github.com/kevinstl/lightning-kube ~/Developer/projects/lightning-kube`
+4. Change to project directory `cd ~/Developer/projects/lightning-kube`
 5. Import this project into your Jenkins X instance. `jx import`
 
 If the installation is successful and you installed via Minikube Easy then Jenkins X should have deployed this [README.md](http://minikube-easy:30801/lightning-kube/README.md) into your kubernetes cluster.
