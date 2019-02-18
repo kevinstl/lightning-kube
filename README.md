@@ -15,12 +15,12 @@ This project implements a Lightning Node running in Kubernetes using Lightning N
 
 LND currently requires a connection to a full bitcoin node. Lightning Kube consists of the following Kubernetes/Jenkins X ready projects:
 
-- [Lightning Kube LND](https://github.com/kevinstl/lightning-kube-lnd)
-- [Lightning Kube BTCD](https://github.com/kevinstl/lightning-kube-btcd)
+- [LND Kube](https://github.com/kevinstl/lnd-kube)
+- [BTCD Kube](https://github.com/kevinstl/btcd-kube)
 
 If you do not currently have and instance of Kubernetes an excellent place to start is to deploy it locally with [Minikube](https://github.com/kubernetes/minikube). A new installation of Jenkins X will offer to install Minikube for you but you may want to give [Minikube Easy](https://github.com/kevinstl/minikube-easy) a look as it can simplify and enhance your Minikube installation. Once you're ready to run your Lighting Node on mainnet [Google Kubernetes Engine (GKE)](https://cloud.google.com/kubernetes-engine/) is an easy to use cloud based Kubernetes Cluster.
 
-This project itself is actually a Kubernetes/Jenkins X ready implementation of [Markserv](https://github.com/markserv/markserv) to allow for real time github style rendering and editing of this README.md file locally. Deploying this project to your own Kubernetes instance would be a simple way to get acquainted with Kubernetes and Jenkins X. There is probably no reason to deploy this project to a production environment. It is intended strictly for learning purposes. If you are already familiar with kubernetes and Jenkins X or just want to get going now then you can move on to installing [Lightning Kube LND](https://github.com/kevinstl/lightning-kube-lnd) and [Lightning Kube BTCD](https://github.com/kevinstl/lightning-kube-btcd).
+This project itself is actually a Kubernetes/Jenkins X ready implementation of [Markserv](https://github.com/markserv/markserv) to allow for real time github style rendering and editing of this README.md file locally. Deploying this project to your own Kubernetes instance would be a simple way to get acquainted with Kubernetes and Jenkins X. There is probably no reason to deploy this project to a production environment. It is intended strictly for learning purposes. If you are already familiar with kubernetes and Jenkins X or just want to get going now then you can move on to installing [LND Kube](https://github.com/kevinstl/lnd-kube) and [BTCD Kube](https://github.com/kevinstl/btcd-kube).
 
 To install this project:
 
