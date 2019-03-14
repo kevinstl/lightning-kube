@@ -2,21 +2,25 @@
 
 Lightning Kube provides a simple way to deploy a Lightning Node into Kubernetes.           
 
-[<img src="https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.png" width="100px">](https://kubernetes.io/docs/home "Kubernetes")  [<img src="https://raw.githubusercontent.com/lightningnetwork/lnd/master/logo.png" width="100px">](https://github.com/lightningnetwork/lnd "LND")  [<img src="https://avatars3.githubusercontent.com/u/10235229?s=200&v=4" width="100px">](https://github.com/btcsuite/btcd "BTCD")  [<img src="https://jenkins.io/images/logos/jenkins-x/jenkins-x-256.png" width="100px">](https://jenkins-x.io "Jenkins X")
+[<img src="https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.png" width="100px">](https://kubernetes.io/docs/home "Kubernetes")  [<img src="https://raw.githubusercontent.com/lightningnetwork/lnd/master/logo.png" width="100px">](https://github.com/lightningnetwork/lnd "LND")  [<img src="https://avatars2.githubusercontent.com/u/528860?s=200&v=4" width="100px">](https://github.com/bitcoin/bitcoin "bitcoind")  [<img src="https://avatars3.githubusercontent.com/u/10235229?s=200&v=4" width="100px">](https://github.com/btcsuite/btcd "BTCD")  [<img src="https://jenkins.io/images/logos/jenkins-x/jenkins-x-256.png" width="100px">](https://jenkins-x.io "Jenkins X")
 
-This project is confirmed to work for simnet on a minikube instance. **It has not been tested or hardened for security on testnet or mainnet.**
+This project is confirmed to work for regtest, simnet, testnet and mainnet on a minikube instance and a gke instance.
 
 This project implements a Lightning Node running in Kubernetes using Lightning Network Daemon (LND) and BTCD deployed by Jenkins X. 
 
 - [Kubernetes](https://kubernetes.io/docs/home) is a container management system. If a project is [Dockerized](https://www.docker.com) Kubernetes simplifies your project lifecycle.
 - [Lightning Network Daemon (LND)](https://github.com/lightningnetwork/lnd) is a complete implementation of a Lightning Network node.
+- [Bitcoind](https://github.com/bitcoin/bitcoin) is an implementation of a full bitcoin node from bitcoin core.
 - [BTCD](https://github.com/btcsuite/btcd) is an implementation of a full bitcoin node written in Go.
 - [Jenkins X](https://jenkins-x.io) is a CI/CD solution for applications on Kubernetes.
 
 LND currently requires a connection to a full bitcoin node. Lightning Kube consists of the following Kubernetes/Jenkins X ready projects:
 
 - [LND Kube](https://github.com/kevinstl/lnd-kube)
+- [Bitcoind Kube](https://github.com/kevinstl/bitcoind-kube)
 - [BTCD Kube](https://github.com/kevinstl/btcd-kube)
+
+You have two options for your full bitcoin node, Bitcoind Kube or BTCD Kube. Currently Bitcoind is recommended as it appears to sync with the entire blockchain faster than BTCD.
 
 If you do not currently have and instance of Kubernetes an excellent place to start is to deploy it locally with [Minikube](https://github.com/kubernetes/minikube). A new installation of Jenkins X will offer to install Minikube for you but you may want to give [Minikube Easy](https://github.com/kevinstl/minikube-easy) a look as it can simplify and enhance your Minikube installation. Once you're ready to run your Lighting Node on mainnet [Google Kubernetes Engine (GKE)](https://cloud.google.com/kubernetes-engine/) is an easy to use cloud based Kubernetes Cluster.
 
